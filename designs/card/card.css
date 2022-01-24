@@ -1,0 +1,218 @@
+/* Reset CSS */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+img,
+video,
+iframe {
+  max-inline-size: 100%;
+  block-size: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Author CSS */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  height: 100vh;
+  /* background-color: #c0c0c0; */
+}
+
+.card-container {
+  position: relative;
+  background-color: #fff;
+  max-width: 350px;
+  border-radius: 5px;
+  overflow: hidden;
+  color: #666666;
+  box-shadow: 0 1px 3px gray;
+}
+
+.card-header {
+  padding: 1rem;
+  padding-bottom: 1rem;
+}
+
+.card-image {
+  position: relative;
+}
+
+.card-image > img {
+  aspect-ratio: 1/1;
+}
+
+.card-image-textover {
+  position: absolute;
+  inset: 0;
+  /* bottom: 0; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 1rem;
+  text-shadow: 0.5px 0px 0.5px black;
+}
+
+.card-image-textover > .card-title,
+.card-image-textover > .card-subtitle {
+  color: white;
+}
+
+.card-details {
+  padding: 0.5rem 1rem;
+  /* padding-top: 0.5rem; */
+}
+
+.card-title {
+  padding: 0.2rem 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: black;
+}
+.card-subtitle {
+  font-size: 0.9rem;
+  font-weight: 450;
+}
+.card-paragraph {
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+.card-footer {
+  padding: 0.3rem;
+  /* padding-bottom: 0.4rem; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-footer-right,
+.card-footer-right {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.card-footer-left {
+  justify-content: flex-start;
+}
+
+.card-footer-right {
+  justify-content: flex-end;
+}
+
+.card-body {
+  position: relative;
+}
+
+.card-body-horizontal {
+  position: relative;
+  display: flex;
+}
+
+.card-body-horizontal > .card-image {
+  flex-basis: 30%;
+  box-sizing: border-box;
+}
+
+.card-body-horizontal > .card-details {
+  padding-top: 1rem;
+}
+
+/* Hover Effects and Transitions */
+.overlay {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.05);
+  color: #f1f1f1;
+  width: 100%;
+  transition: 0.5s ease;
+  opacity: 0;
+}
+
+.overlay:hover,
+.overlay:focus {
+  outline: none;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.card-container .btn {
+  color: rgb(98, 1, 239);
+  font-weight: 500;
+  padding: 0.75em;
+  text-transform: uppercase;
+  /* text-transform: capitalize; */
+  /* display: inline-flex;
+  justify-content: center;
+  align-items: center;*/
+}
+.card-container .btn:hover {
+  background-color: rgb(249, 245, 254);
+}
+
+.link-hover {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8%;
+}
+
+.link-icon {
+  display: inline-flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+  /* font-weight: 100; */
+  border-radius: 50%;
+  width: 2.5em;
+  height: 2.5em;
+}
+
+.link-hover:hover,
+.link-hover:focus {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.05);
+  /* background-color: inherit; */
+  outline: 0;
+}
+
+.link-hover::after {
+  content: "";
+  background-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  width: 0%;
+  height: 0%;
+  border-radius: inherit;
+  opacity: 0;
+  transition: width 0.1s linear, height 0.1s linear;
+}
+.link-hover:active::after {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+}
