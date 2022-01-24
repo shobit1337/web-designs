@@ -85,14 +85,17 @@ iframe {
 }
 
 .card-title {
+  display: block;
   padding: 0.2rem 0;
   font-size: 1.25rem;
   font-weight: 500;
   color: black;
 }
 .card-subtitle {
+  display: block;
   font-size: 0.9rem;
   font-weight: 450;
+  padding-bottom: 0.2rem;
 }
 .card-paragraph {
   display: inline-block;
