@@ -1,0 +1,145 @@
+/* Reset CSS */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #53c6d9;
+  --secondary-color: #fc608c;
+  --accient-color: #ae98e7;
+
+  --success-color: #7ad88f;
+  --danger-color: #fc9253;
+  --warn-color: #e4cf66;
+
+  --dark-color: #0a0f15;
+  --light-color: #f7f0fe;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+img,
+video,
+iframe {
+  max-inline-size: 100%;
+  block-size: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Author CSS */
+
+body {
+  background-color: var(--dark-color);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chips-input {
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: auto;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  min-width: 100px;
+  background-color: var(--light-color);
+  max-width: 600px;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+}
+
+.chips-input > input {
+  display: inline-block;
+  flex-grow: 1;
+  border: none;
+  /* border-top: 1px solid white; */
+  background-color: var(--light-color);
+  border-bottom: 3px solid var(--dark-color);
+  padding: 0.25rem;
+  min-width: 25px;
+  order: 2;
+  outline: none;
+}
+
+.chips-input > input:hover,
+.chips-input > input:focus {
+  border-bottom: 3px solid black;
+}
+
+.chips-input > .chip {
+  flex: 0 1 auto;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  max-width: 100%;
+  max-height: 2rem;
+  text-overflow: hidden;
+  overflow: hidden;
+  padding: 0.25rem;
+  cursor: default;
+  border-radius: 1rem;
+  background-color: #dddddd;
+}
+
+.chip > .fa-times-circle,
+.chip > .fa-circle {
+  opacity: 0.8;
+}
+.chip > .fa-times-circle:hover,
+.chip > .fa-circle:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* Color Variations */
+/* //TODO: Create CSS Variables */
+.chip.chip-primary {
+  color: var(--gray-color);
+  background-color: var(--primary-color);
+  opacity: 1;
+}
+
+.chip-primary:hover {
+  opacity: 0.9;
+}
+
+.chip.chip-secondary {
+  color: var(--gray-color);
+  background-color: var(--secondary-color);
+  opacity: 1;
+}
+
+.chip-secondary:hover {
+  opacity: 0.9;
+}
+
+.chip.chip-accient {
+  color: var(--gray-color);
+  background-color: var(--accient-color);
+  opacity: 1;
+}
+
+.chip-accient:hover {
+  opacity: 0.9;
+}
